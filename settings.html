@@ -1,0 +1,210 @@
+<div id="codex_image_bridge_settings" class="inline-drawer codex-image-bridge-settings">
+    <div class="inline-drawer-toggle inline-drawer-header codex-image-bridge-drawer-header">
+        <div class="codex-image-bridge-title">
+            <b>Codex Image Bridge</b>
+            <span>ST 生图桥接</span>
+        </div>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+
+    <div class="inline-drawer-content codex-image-bridge-content">
+        <div class="codex-image-bridge-hero">
+            <div>
+                <h3>生图控制台</h3>
+                <p>自动任务、角色模板、图片缓存统一管理。</p>
+            </div>
+            <div class="codex-image-bridge-actions">
+                <input id="codex_image_bridge_resume" type="button" class="menu_button" value="重新检查结果" />
+                <span id="codex_image_bridge_status" class="codex-image-bridge-status"></span>
+            </div>
+        </div>
+
+        <section class="codex-image-bridge-section">
+            <div class="codex-image-bridge-section-header">
+                <h3>运行设置</h3>
+            </div>
+
+            <div class="codex-image-bridge-toggle-grid">
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_enabled" data-codex-image-bridge-setting="enabled" type="checkbox" />
+                    <span>自动生成图片</span>
+                </label>
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_fast_mode" data-codex-image-bridge-setting="fastMode" type="checkbox" />
+                    <span>极速模式</span>
+                </label>
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_use_worldbook_directives" data-codex-image-bridge-setting="useWorldbookDirectives" type="checkbox" />
+                    <span>世界书视觉指令</span>
+                </label>
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_render_media_blocks" data-codex-image-bridge-setting="renderMediaBlocks" type="checkbox" />
+                    <span>HTML 介质转图</span>
+                </label>
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_hide_directive_markup" data-codex-image-bridge-setting="hideDirectiveMarkup" type="checkbox" />
+                    <span>隐藏视觉标记</span>
+                </label>
+                <label class="checkbox_label codex-image-bridge-toggle">
+                    <input id="codex_image_bridge_floating_button_enabled" data-codex-image-bridge-setting="floatingButton" type="checkbox" />
+                    <span>悬浮球入口</span>
+                </label>
+            </div>
+
+            <div class="codex-image-bridge-grid">
+                <label>
+                    <span>尺寸</span>
+                    <select id="codex_image_bridge_size" data-codex-image-bridge-setting="size" class="text_pole">
+                        <option value="512x512">512x512</option>
+                        <option value="1024x1024">1024x1024</option>
+                        <option value="1024x1536">1024x1536</option>
+                        <option value="1536x1024">1536x1024</option>
+                        <option value="auto">auto</option>
+                    </select>
+                </label>
+                <label>
+                    <span>界面主题</span>
+                    <select id="codex_image_bridge_ui_theme" data-codex-image-bridge-setting="uiTheme" class="text_pole">
+                        <option value="auto">跟随酒馆</option>
+                        <option value="light">亮色</option>
+                        <option value="dark">暗色</option>
+                    </select>
+                </label>
+                <label>
+                    <span>提示词预设</span>
+                    <select id="codex_image_bridge_prompt_preset" data-codex-image-bridge-setting="promptPreset" class="text_pole">
+                        <option value="story-cinematic">故事电影感</option>
+                        <option value="portrait-a">肖像A 便利店霓虹</option>
+                        <option value="portrait-b">肖像B 暖卧室胶片</option>
+                        <option value="portrait-c">肖像C 日系富士</option>
+                        <option value="cos-a">Cos 恋爱游戏截图</option>
+                        <option value="portrait-d">肖像D 城市街头</option>
+                        <option value="portrait-e">肖像E 黑雾室内</option>
+                        <option value="portrait-f">肖像F 午后日系</option>
+                    </select>
+                </label>
+                <label>
+                    <span>最少张数</span>
+                    <input id="codex_image_bridge_min_images" data-codex-image-bridge-setting="minImages" type="number" min="1" max="6" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>最多张数</span>
+                    <input id="codex_image_bridge_max_images" data-codex-image-bridge-setting="maxImages" type="number" min="1" max="6" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>上下文条数</span>
+                    <input id="codex_image_bridge_context_messages" data-codex-image-bridge-setting="contextMessages" type="number" min="0" max="12" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>视觉记忆条数</span>
+                    <input id="codex_image_bridge_memory_items" data-codex-image-bridge-setting="memoryItems" type="number" min="0" max="12" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>保存记忆上限</span>
+                    <input id="codex_image_bridge_memory_entries" data-codex-image-bridge-setting="memoryEntries" type="number" min="1" max="200" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>单条记忆字数</span>
+                    <input id="codex_image_bridge_memory_max_chars" data-codex-image-bridge-setting="memoryMaxChars" type="number" min="120" max="2000" step="20" class="text_pole" />
+                </label>
+                <label>
+                    <span>身份参考图数</span>
+                    <input id="codex_image_bridge_character_reference_count" data-codex-image-bridge-setting="characterReferenceCount" type="number" min="0" max="6" step="1" class="text_pole" />
+                </label>
+                <label>
+                    <span>结果轮询(ms)</span>
+                    <input id="codex_image_bridge_poll_ms" data-codex-image-bridge-setting="resultPollMs" type="number" min="2000" max="300000" step="1000" class="text_pole" />
+                </label>
+                <label>
+                    <span>等待超时(ms)</span>
+                    <input id="codex_image_bridge_timeout_ms" data-codex-image-bridge-setting="resultTimeoutMs" type="number" min="60000" max="604800000" step="60000" class="text_pole" />
+                </label>
+                <label>
+                    <span>活动窗口(分钟)</span>
+                    <input id="codex_image_bridge_automation_active_minutes" data-codex-image-bridge-setting="automationActiveMinutes" type="number" min="1" max="1440" step="1" class="text_pole" />
+                </label>
+            </div>
+
+            <label class="codex-image-bridge-wide-field">
+                <span>统一画风</span>
+                <input id="codex_image_bridge_style" data-codex-image-bridge-setting="style" type="text" class="text_pole" />
+            </label>
+
+            <label class="codex-image-bridge-wide-field">
+                <span>固定提示词模板</span>
+                <textarea id="codex_image_bridge_prompt_template" data-codex-image-bridge-setting="promptTemplate" class="text_pole codex-image-bridge-template" rows="10"></textarea>
+            </label>
+        </section>
+
+        <section class="codex-image-bridge-section codex-image-bridge-character-library">
+            <div class="codex-image-bridge-section-header">
+                <h3>角色库</h3>
+            </div>
+
+            <div class="codex-image-bridge-cache-controls codex-image-bridge-subtoolbar">
+                <input id="codex_image_bridge_character_use_current" type="button" class="menu_button" value="当前角色" />
+                <input id="codex_image_bridge_character_new" type="button" class="menu_button" value="新建" />
+                <input id="codex_image_bridge_character_save" type="button" class="menu_button" value="保存角色" />
+                <input id="codex_image_bridge_character_delete" type="button" class="menu_button danger" value="删除角色" />
+                <input id="codex_image_bridge_character_add_refs" type="button" class="menu_button" value="选中缓存图加入参考" />
+                <input id="codex_image_bridge_character_refresh" type="button" class="menu_button" value="刷新角色库" />
+            </div>
+
+            <div class="codex-image-bridge-character-workspace">
+                <div id="codex_image_bridge_character_list" class="codex-image-bridge-character-list"></div>
+
+                <div class="codex-image-bridge-character-editor">
+                    <label>
+                        <span>角色名</span>
+                        <input id="codex_image_bridge_character_name" type="text" class="text_pole" />
+                    </label>
+                    <label>
+                        <span>别名</span>
+                        <textarea id="codex_image_bridge_character_aliases" class="text_pole" rows="3" placeholder="每行一个，也可用逗号分隔"></textarea>
+                    </label>
+                    <label>
+                        <span>外貌识别要点</span>
+                        <textarea id="codex_image_bridge_character_appearance" class="text_pole" rows="5"></textarea>
+                    </label>
+                    <label>
+                        <span>常用服装/标志物</span>
+                        <textarea id="codex_image_bridge_character_outfit" class="text_pole" rows="5"></textarea>
+                    </label>
+                    <label>
+                        <span>性格/表情倾向</span>
+                        <textarea id="codex_image_bridge_character_personality" class="text_pole" rows="4"></textarea>
+                    </label>
+                    <label>
+                        <span>角色负面提示</span>
+                        <textarea id="codex_image_bridge_character_negative" class="text_pole" rows="4" placeholder="不希望出现的脸型、发色、服装错误等"></textarea>
+                    </label>
+                    <label class="codex-image-bridge-wide-field">
+                        <span>参考图</span>
+                        <textarea id="codex_image_bridge_character_references" class="text_pole" rows="4" placeholder="user/images/codex-image-bridge/example.png"></textarea>
+                    </label>
+                    <div id="codex_image_bridge_character_reference_preview" class="codex-image-bridge-reference-preview codex-image-bridge-wide-field"></div>
+                    <input id="codex_image_bridge_character_upload_refs" type="button" class="menu_button codex-image-bridge-wide-field" value="上传本地参考图" />
+                    <input id="codex_image_bridge_character_upload_input" type="file" accept="image/*" multiple hidden />
+                </div>
+            </div>
+        </section>
+
+        <section class="codex-image-bridge-section codex-image-bridge-cache">
+            <div class="codex-image-bridge-section-header">
+                <h3>图片缓存</h3>
+                <div class="codex-image-bridge-cache-controls">
+                    <input id="codex_image_bridge_cache_refresh" type="button" class="menu_button" value="刷新" />
+                    <input id="codex_image_bridge_cache_multiselect" type="button" class="menu_button" value="多选" />
+                    <input id="codex_image_bridge_cache_select_all" type="button" class="menu_button" value="全选" />
+                    <input id="codex_image_bridge_cache_deselect_all" type="button" class="menu_button" value="取消全选" />
+                    <input id="codex_image_bridge_cache_download_selected" type="button" class="menu_button" value="下载选中" />
+                    <input id="codex_image_bridge_cache_delete_selected" type="button" class="menu_button danger" value="删除选中" />
+                </div>
+            </div>
+            <input id="codex_image_bridge_cache_search" type="search" class="text_pole" placeholder="搜索角色、文件名、提示词、jobId" />
+            <div id="codex_image_bridge_cache_grid" class="codex-image-bridge-cache-grid"></div>
+            <div id="codex_image_bridge_cache_pagination" class="codex-image-bridge-cache-pagination"></div>
+            <div id="codex_image_bridge_cache_info" class="codex-image-bridge-cache-info"></div>
+        </section>
+    </div>
+</div>

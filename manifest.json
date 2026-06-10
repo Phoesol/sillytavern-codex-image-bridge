@@ -1,0 +1,11 @@
+{
+    "display_name": "Codex Image Bridge",
+    "loading_order": 11,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Codex",
+    "version": "1.9.13",
+    "homePage": "https://github.com/Phoesol/sillytavern-codex-image-bridge"
+}
