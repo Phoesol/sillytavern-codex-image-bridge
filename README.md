@@ -89,7 +89,7 @@ The extension treats 气泡音 HTML as a display wrapper. It extracts `<xmp id="
 Codex can process jobs in two ways:
 
 - Heartbeat: the `sillytavern-heartbeat` automation reads `AUTOMATION_PROMPT.md` and checks on a schedule.
-- One-shot: when the user says `开始sillytavern生图`, Codex reads `ONE_SHOT_PROMPT.md`, processes one newest pending job for the current chat, writes the result file, and stops. `开始sillytavern生图全部` drains current-chat pending jobs from old to new.
+- One-shot: when the user says `开始 Codex 酒馆工作流`, Codex reads `ONE_SHOT_PROMPT.md`, processes one newest pending job for the current chat, runs enabled auxiliary tasks, writes the result files, and stops. `开始 Codex 酒馆工作流全部` drains current-chat pending jobs from old to new. The older `开始sillytavern生图` phrase remains a compatibility alias.
 
 ## Release Policy
 
