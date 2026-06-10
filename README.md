@@ -90,3 +90,9 @@ Codex can process jobs in two ways:
 
 - Heartbeat: the `sillytavern-heartbeat` automation reads `AUTOMATION_PROMPT.md` and checks on a schedule.
 - One-shot: when the user says `开始sillytavern生图`, Codex reads `ONE_SHOT_PROMPT.md`, processes one newest pending job for the current chat, writes the result file, and stops. `开始sillytavern生图全部` drains current-chat pending jobs from old to new.
+
+## Release Policy
+
+- Each functional update increments the minor version by 0.1.
+- Every 10 minor updates become one major version.
+- Published versions are pushed to GitHub.
